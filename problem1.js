@@ -59,3 +59,5 @@ var checkSequence = function(input) {
 }
 
 console.log('Problem 1 example:::', checkSequence([1,0,1,2,3,0,4,5]));
+console.log('Problem 1 example with negative numbers:::', checkSequence([-7,-6,-5,-4,-3,1,0,1,2]));
+console.log('Problem 1 example with two sub sequences of the same length:::', checkSequence([1,0,1,2,3,0,4,5,6,7]));

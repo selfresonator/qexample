@@ -33,7 +33,7 @@ var boardChecker = function(board) {
   exArr.push(checkColumns(board));
   exArr.push(checkMinDiagonal(board));
   exArr.push(checkMajDiagonal(board));
-
+  console.log(exArr);
   if (exArr.indexOf(':x') !== -1) {
     return ':x';
   } else if (exArr.indexOf(':o') !== -1) {
@@ -155,10 +155,10 @@ var boardChecker = function(board) {
           majArray.push(letter);
         }
         
+        loIndex++;
+        hiIndex--;
       }
       
-      loIndex++;
-      hiIndex--;
       
       // If the array isnt the length of the board, emoty that array and check the next column
       if (majArray.length < 3) {
@@ -166,10 +166,47 @@ var boardChecker = function(board) {
       } else {
         return majArray[0];
       }
+      
+      loIndex = 0;
+      hiIndex = 2;
     }
     
     return 'nil';
   }
 }
 
-console.log('Problem 2 example:::', boardChecker(testArr));
+var testArr1 = [
+  [':x', ':e', ':o'],
+  [':x', ':e', ':e'],
+  [':x', ':e', ':o']
+];
+
+var testArr2 = [
+  [':x', ':x', ':x'],
+  [':e', ':o', ':e'],
+  [':x', ':e', ':o']
+];
+
+var testArr3 = [
+  [':o', ':e', ':e'],
+  [':x', ':o', ':e'],
+  [':x', ':e', ':o']
+];
+
+var testArr4 = [
+  [':e', ':e', ':o'],
+  [':x', ':o', ':e'],
+  [':o', ':e', ':x']
+];
+
+var testArr5 = [
+  [':o', ':e', ':x'],
+  [':x', ':x', ':e'],
+  [':e', ':e', ':o']
+];
+
+console.log('Problem 2 example 1 for colums:::', boardChecker(testArr1));
+console.log('Problem 2 example 2 for rows:::', boardChecker(testArr2));
+console.log('Problem 2 example 3 for descending diagonals:::', boardChecker(testArr3)); // ':o'
+console.log('Problem 2 example 4 for ascending diagonals:::', boardChecker(testArr4));  // ':o'
+console.log('Problem 2 example 5 for a tie game:::', boardChecker(testArr5));           // 'nil'
