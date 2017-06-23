@@ -33,7 +33,7 @@ var boardChecker = function(board) {
   exArr.push(checkColumns(board));
   exArr.push(checkMinDiagonal(board));
   exArr.push(checkMajDiagonal(board));
-  console.log(exArr);
+
   if (exArr.indexOf(':x') !== -1) {
     return ':x';
   } else if (exArr.indexOf(':o') !== -1) {
