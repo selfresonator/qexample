@@ -15,7 +15,7 @@
 // _____________________________________________________________________________________________________________________
 // _____________________________________________________________________________________________________________________
 // MY ANSWER____________________________________________________________________________________________________________
-// Muy solution for this can be easily tested for three questions: 1) Does a sub-sequence exists, 2) What is the LONGEST
+// My solution for this can be easily tested for three questions: 1) Does a sub-sequence exists, 2) What is the LONGEST
 // sub-sequence, and 3) Does this function work with negative numbers?
 // I use a subroutine in order to go through the list, since we dont know exactly how long the list will be or how many
 // times we will have to loop through it.
@@ -58,6 +58,6 @@ var checkSequence = function(input) {
   }
 }
 
-console.log('Problem 1 example:::', checkSequence([1,0,1,2,3,0,4,5]));
-console.log('Problem 1 example with negative numbers:::', checkSequence([-7,-6,-5,-4,-3,1,0,1,2]));
-console.log('Problem 1 example with two sub sequences of the same length:::', checkSequence([1,0,1,2,3,0,4,5,6,7]));
+console.log('Problem 1 example:::', checkSequence([1,0,1,2,3,0,4,5])); // [0,1,2,3]
+console.log('Problem 1 example with negative numbers:::', checkSequence([-7,-6,-5,-4,-3,1,0,1,2])); // [-7, -6, -5, -4, -3]
+console.log('Problem 1 example with two sub sequences of the same length:::', checkSequence([1,0,1,2,3,0,4,5,6,7])); // [0, 1, 2, 3]
