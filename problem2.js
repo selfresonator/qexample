@@ -205,8 +205,8 @@ var testArr5 = [
   [':e', ':e', ':o']
 ];
 
-console.log('Problem 2 example 1 for colums:::', boardChecker(testArr1));
-console.log('Problem 2 example 2 for rows:::', boardChecker(testArr2));
+console.log('Problem 2 example 1 for colums:::', boardChecker(testArr1));               // ':x'
+console.log('Problem 2 example 2 for rows:::', boardChecker(testArr2));                 // ':x'
 console.log('Problem 2 example 3 for descending diagonals:::', boardChecker(testArr3)); // ':o'
 console.log('Problem 2 example 4 for ascending diagonals:::', boardChecker(testArr4));  // ':o'
 console.log('Problem 2 example 5 for a tie game:::', boardChecker(testArr5));           // 'nil'
